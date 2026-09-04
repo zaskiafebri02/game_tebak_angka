@@ -1,15 +1,6 @@
-<script>
-const angkaBenar = Math.floor(Math.random() * 100) + 1;
-const tombol = document.querySelector('button');
-tombol.onclick = function() {
-    const tebakan = document.getElementById('tebakan').value;
-    const hasil = document.getElementById('hasil');
-    if (tebakan < angkaBenar) {
-        hasil.textContent = "Terlalu Kecil!";
-    } else if (tebakan > angkaBenar) {
-        hasil.textContent = "Terlalu Besar!";
-    } else {
-        hasil.textContent = "✅ BENAR!";
-    }
-}
-</script>
+<style>
+    h2 { color: darkblue; text-align: center; }
+    body { font-family: Arial; max-width: 400px; margin: 20px auto; padding: 20px; }
+    button { background: blue; color: white; border: none; padding: 8px 16px; cursor: pointer; }
+    #hasil { margin-top: 15px; font-weight: bold; }
+</style>
