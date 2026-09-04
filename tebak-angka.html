@@ -2,6 +2,14 @@
 const angkaBenar = Math.floor(Math.random() * 100) + 1;
 const tombol = document.querySelector('button');
 tombol.onclick = function() {
-    alert('Tombol ditekan!');
+    const tebakan = document.getElementById('tebakan').value;
+    const hasil = document.getElementById('hasil');
+    if (tebakan < angkaBenar) {
+        hasil.textContent = "Terlalu Kecil!";
+    } else if (tebakan > angkaBenar) {
+        hasil.textContent = "Terlalu Besar!";
+    } else {
+        hasil.textContent = "✅ BENAR!";
+    }
 }
 </script>
